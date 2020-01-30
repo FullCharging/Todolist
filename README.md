@@ -1,2 +1,2 @@
 # schedule
-make a schedule
+make a to do list
