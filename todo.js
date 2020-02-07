@@ -9,9 +9,20 @@ function saveTodo() {
   localStorage.setItem("TODO", JSON.stringify(array));
 }
 
+function handleDel(e) {
+  const li = e.target.parentNode;
+  todoList.removeChild(li);
+  const cleanTodo = array.filter(function(ele) {
+    return li.id !== ele.id;
+  });
+  array = cleanTodo;
+  saveTodo();
+}
+
 function paintTodo(obj) {
   const li = document.createElement("li");
   const button = document.createElement("button");
+  button.addEventListener("click", handleDel);
   li.innerText = obj.text;
   li.id = obj.id;
   button.innerText = "X";
