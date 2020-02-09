@@ -20,16 +20,21 @@ function handleDel(e) {
 }
 
 function paintTodo(obj) {
-  const li = document.createElement("li");
-  const button = document.createElement("button");
-  button.addEventListener("click", handleDel);
-  li.innerText = obj.text;
-  li.id = obj.id;
-  button.innerText = "X";
-  li.appendChild(button);
-  todoList.appendChild(li);
-  array.push(obj);
-  saveTodo();
+  if (array.length > 5) {
+    alert("Solve important matters first");
+  } else {
+    const li = document.createElement("li");
+    const button = document.createElement("button");
+    button.addEventListener("click", handleDel);
+    li.innerText = obj.text;
+    li.id = obj.id;
+    li.classList.add("list");
+    button.innerText = "X";
+    li.appendChild(button);
+    todoList.appendChild(li);
+    array.push(obj);
+    saveTodo();
+  }
 }
 
 function makeObj(text) {

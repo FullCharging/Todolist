@@ -41,6 +41,17 @@ body {
   color: skyblue;
 }
 
+.js-form input {
+  font-size: 20px;
+  width: 400px;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: none;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
 .greeting-name {
   display: inline-block;
 }
@@ -52,13 +63,26 @@ body {
 }
 
 .js-todoForm input {
+  font-size: 20px;
   width: 400px;
   height: 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: none;
+  padding-left: 10px;
+  box-sizing: border-box;
 }
 
 .js-todoList {
   color: white;
   font-size: 30px;
+}
+
+.list {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .js-weather {
